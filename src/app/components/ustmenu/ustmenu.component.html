@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light navbar-expand-lg shadow">
+    <a [routerLink]="['/']" class="navbar-brand"> <strong> ANASAYFA </strong> </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+
+
+        <ul class="navbar-nav" *ngIf="this.fbServis.OturumKontrol()">
+            <li class="nav-item">
+                <a [routerLink]="['/yonetim']" class="nav-link">Yönetici Paneli</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['']" (click)="OturumKapat()" class="nav-link">Çıkış Yap</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav" *ngIf="!this.fbServis.OturumKontrol()">
+            <li class="nav-item">
+                <a [routerLink]="['/uyeol']" class="nav-link">Üye Ol</a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/giris']" class="nav-link">Giriş Yap</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

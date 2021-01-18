@@ -1,0 +1,23 @@
+<app-yonetim></app-yonetim>
+<table class="table table-striped mt-5 ml-4 mr-4">
+    <thead>
+        <tr>
+            <th scope="col">Adı Soyad</th>
+            <th scope="col">Mail Adresi</th>
+            <th scope="col">Parola</th>
+            <th scope="col">Yetki</th>
+            <th scope="col">Uid</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let uye of uyeler">
+            <td>{{uye.adsoyad}}</td>
+            <td>{{uye.mail}}</td>
+            <td>{{uye.parola}}</td>
+            <td>{{uye.yetki}}</td>
+            <td>{{uye.uid}}</td>
+            <td><button class="btn btn-warning btn-sm mr-3" [routerLink]="['/uyeduzenle',uye.key]">Düzenle</button><button class="btn btn-danger btn-sm" (click)="Sil(uye)">Sil</button></td>
+        </tr>
+    </tbody>
+</table>

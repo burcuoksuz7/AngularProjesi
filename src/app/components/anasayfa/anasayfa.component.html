@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <div class="clearfix">
+        <hr>
+    </div>
+
+    <h1 class="display-4 text-center mb-2 ">Günlük Ev Kiralama</h1>
+    <p class="text-center mb-5">Seçmiş olduğunuz evin bilgilerini görmek için "Detay" butonuna tıklayınız. <br> Evin müsaitlik durumunu öğrenmek ve daha fazla bilgi almak için iletişime geçiniz. </p>
+
+    <div class="card-columns">
+        <div class="card border-0 shadow" *ngFor="let ev of evler">
+            <img src="{{ev.foto}}" class="card-img-top">
+            <div class="card-body">
+                <h6>Kiralık Ev</h6>
+                <button [routerLink]="['/detay',ev.key]" id="mp1" class="btn btn-outline-primary btn-black">Detay</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

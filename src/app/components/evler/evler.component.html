@@ -1,0 +1,30 @@
+<app-yonetim></app-yonetim>
+<div class="container mt-3">
+    <button class="btn btn-primary" [routerLink]="['/evekle']">Ev Ekle</button>
+</div>
+<table class="table table-striped mt-5 ml-4 mr-4">
+    <thead>
+        <tr>
+            <th scope="col">Fotoğraf</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Kat</th>
+            <th scope="col">Oda Sayısı</th>
+            <th scope="col">Banyo Sayısı</th>
+            <th scope="col">Isınma</th>
+            <th scope="col">Adres</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ev of evler">
+            <td><img src="{{ev.foto}}" alt="" width="100"></td>
+            <td>{{ev.fiyat}}</td>
+            <td>{{ev.kat}}</td>
+            <td>{{ev.odasayisi}}</td>
+            <td>{{ev.banyosayisi}}</td>
+            <td>{{ev.isinma}}</td>
+            <td>{{ev.adres}}</td>
+            <td><button class="btn btn-warning btn-sm mr-3" [routerLink]="['/evduzenle',ev.key]">Güncelle</button><button class="btn btn-danger btn-sm" (click)="Sil(ev)">Sil</button></td>
+        </tr>
+    </tbody>
+</table>

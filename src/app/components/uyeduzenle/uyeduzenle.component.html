@@ -1,0 +1,36 @@
+<div class="container mt-5">>
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <form #frm="ngForm" (ngSubmit)="Kaydet()">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h4>Kayıt Ekle</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Ev Fotoğraf</label>
+                        <input type="text" class="form-control" readonly name="uid" [(ngModel)]="secUye.uid" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ev Fotoğraf</label>
+                        <input type="text" class="form-control" readonly name="adsoyad" [(ngModel)]="secUye.adsoyad" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ev Fiyat</label>
+                        <input type="text" class="form-control" name="yetki" [(ngModel)]="secUye.yetki" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Oda Sayısı</label>
+                        <input type="text" class="form-control" readonly name="oda" [(ngModel)]="secUye.mail" required>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <input type="submit" value="Kaydet" class="btn btn-outline-success" [disabled]="frm.invalid">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

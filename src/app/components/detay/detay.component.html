@@ -1,0 +1,57 @@
+<div id="kpz1" class="container my-5">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card p-0 border-0 shadow">
+                <div class="card-body">
+                    <img src="{{evler.foto}}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+
+            <h3>Adres</h3> <br>
+            <h6 class="text-danger">{{evler.adres}}</h6>
+
+            <hr>
+            <h3>
+                Ev Özellikleri
+            </h3>
+
+            <table border="1">
+                <tr align="center">
+                    <td>
+                        <h5>Günlük Fiyat: </h5>
+                    </td>
+                    <td>
+                        <H5> {{evler.fiyat}} TL</H5>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>Bulunduğu Kat:</td>
+                    <td> {{evler.kat}}</td>
+                </tr>
+
+                <tr align="center">
+                    <td>Metrekare:</td>
+                    <td>{{evler.metrekare}}</td>
+                </tr>
+                <tr align="center">
+                    <td>Oda Sayısı:</td>
+                    <td>{{evler.odasayisi}}</td>
+                </tr>
+                <tr align="center">
+                    <td>Isınma:</td>
+                    <td>{{evler.isinma}}</td>
+                </tr>
+                <tr align="center">
+                    <td>Banyo Sayısı:</td>
+                    <td>{{evler.banyosayisi}}</td>
+                </tr>
+            </table>
+
+            <hr>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
